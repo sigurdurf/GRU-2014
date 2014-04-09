@@ -33,12 +33,12 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
             <li><a href="#">Pizza</a></li><!--Put pizza.html/php there-->
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Information<b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="#">About LNT</a></li>
+                <li class="active"><a href="#">About LNT</a></li>
                 <li class="divider"></li>
                 <li><a href="#">About the LAN</a></li>
               </ul>
@@ -59,14 +59,24 @@
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
-    </nav><!--endof fucking nav-->
-          </nav>
-    <div class ="jumbotron">
-      <h1>Welcome to LAN</h1>
-      <p>dorem ipsum le dorkles comes hur le dur</p>
-      <p><a class="btn btn-primary btn-lg" role="button" href ="faq.html">Learn more</a></p>
+    </nav><!--enof fucking nav-->
+    <div class="col-lg-6">
+    <h2>Hvað er LNT?</h2>
+    <p>Við erum nemendurnir sem að</p>
     </div>
-
+        <div class="row">
+        <div class="col-lg-5 col-md-5 col-sm-5" id="leftCol">
+                
+        <div class="well"> 
+                <ul class="nav nav-stacked" id="sidebar">
+                  <li><a href="#sec1">Section 1</a></li>
+                  <li><a href="#sec2">Section 2</a></li>
+                  <li><a href="#sec3">Section 3</a></li>
+                  <li><a href="#sec4">Section 4</a></li>
+                </ul>
+          </div>
+          </div>
+          </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
