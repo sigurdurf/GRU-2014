@@ -8,6 +8,7 @@
 
     <!-- Bootstrap -->
     <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="dist/css/custom.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -17,7 +18,20 @@
     <![endif]-->
   </head>
   <body>
-  
+  <?php
+
+    include 'includes/navigation.inc.html';
+    include 'includes/jumbotron.inc.html';
+    ?>
+    <div class =" container">
+    <div class ="row">
+    <?php
+    include 'includes/sidebar.inc.html';
+    include 'includes/slides.inc.html';
+    
+
+  ?></div></div>
+
          
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
