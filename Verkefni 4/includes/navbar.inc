@@ -1,0 +1,78 @@
+<div class="row">
+	<nav class="navbar navbar-inverse col-lg-12 col-md-12 col-sm-12" role="navigation">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<?php 
+			if (isset($_GET['p']))
+			{
+				echo "<a class='navbar-brand' href='../verkefni 4'>Forsíða</a>";
+			}
+			if (!isset($_GET['p'])) 
+			{
+				echo "<a class='navbar-brand' href='#'>Forsíða</a>";
+			}
+			?>
+		</div>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<?php 
+				if (isset($_GET['p']))
+				{
+					if ($_GET['p']==1)
+					{ 
+						echo "<li class='$active'><a href='#'>$page1</a></li>
+						<li><a href='$p2'>$page2</a></li>";
+					}
+					else if ($_GET['p']==2)
+					{ 
+						echo "<li><a href='$p1'>$page1</a></li>
+						<li class='$active'><a href='#'>$page2</a></li>";
+					}
+					else if ($_GET['p']==3 || $_GET['p']==4)
+					{ 
+						echo "<li><a href='$p1'>$page1</a></li>
+						<li><a href='$p2'>$page2</a></li>";
+					}
+				}
+				else
+				{
+					echo "<li><a href='$p1'>$page1</a></li>
+						<li><a href='$p2'>$page2</a></li>";
+				}
+				?> 
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<?php 
+				if (isset($_GET['p']))
+				{
+					if ($_GET['p']==1 || $_GET['p']==2)
+					{ 
+						echo "<li><a href='$p3'>$page3</a></li>
+						<li><a href='$p4'>$page4</a></li>";
+					}
+					else if ($_GET['p']==3)
+					{ 
+						echo "<li class='$active'><a href='$p3'>$page3</a></li>
+						<li><a href='$p4'>$page4</a></li>";
+					}
+					else if ($_GET['p']==4)
+					{ 
+						echo "<li><a href='$p3'>$page3</a></li>
+						<li class='$active'><a href='#'>$page4</a></li>";
+					}
+				}
+				else
+				{
+					echo "<li><a href='?p=3'>$page3</a></li>
+						<li><a href='$p4'>$page4</a></li>";
+				}
+				?>
+			</ul>
+		</div>
+	</nav>
+</div>
