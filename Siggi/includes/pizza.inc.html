@@ -1,0 +1,52 @@
+<div class="col-lg-4">
+<ul class="nav nav-tabs tabs-up" id="pizza">
+    <?php
+    
+
+      include 'variables/title_and_page.inc.php';
+      if(isset($_GET['tab']))
+      {
+        if ($_GET['tab']==1) {
+          echo "<li class='$active'><a href='$p5' class=''media_node active span' id='contacts_tab' data-toggle='tabajax' rel='tooltip'>$page5</a></li>";
+          echo "<li><a href='$p6' class='media_node span' id='friends_list_tab' data-toggle='tabajax' rel='tooltip'>$page6</a></li>";
+          echo"<li><a href='$p7' data-target='#friends_list' class='media_node span' id='friends_list_tab' data-toggle='tabajax' rel='tooltip'>$page7</a></li>";
+          
+
+        }
+        else if ($_GET['tab']==2)
+        {
+          echo "<li '><a href='$p5' class='media_node span' id='friends_list_tab' data-toggle='tabajax' rel='tooltip'>$page5</a></li>";
+          echo "<li class='$active'><a href='$p6' class=''media_node active span' id='contacts_tab' data-toggle='tabajax' rel='tooltip'>$page6</a></li>";
+          echo"<li><a href='$p7' data-target='#friends_list' class='media_node span' id='friends_list_tab' data-toggle='tabajax' rel='tooltip'>$page7</a></li>";
+        }
+        else if ($_GET['tab']==3)
+        {
+          echo "<li><a href='$p5' class='media_node span' id='friends_list_tab' data-toggle='tabajax' rel='tooltip'>$page5</a></li>";
+          echo "<li><a href='$p6' class=''media_node active span' id='contacts_tab' data-toggle='tabajax' rel='tooltip'>$page6</a></li>";
+          echo"<li class ='$active'><a href='$p7' data-target='#friends_list' class='media_node span' id='friends_list_tab' data-toggle='tabajax' rel='tooltip'>$page7</a></li>";
+        }
+      
+      }
+
+      ?>
+</ul>
+</div>
+
+    <script>
+
+
+    $('[data-toggle="tabajax"]').click(function(e) {
+    var $this = $(this),
+        loadurl = $this.attr('href'),
+        targ = $this.attr('data-target');
+
+    $.get(loadurl, function(data) {
+        $(targ).html(data);
+    });
+
+    $this.tab('show');
+    return false;
+	});
+
+
+    </script><!--tab script, no need to open-->
